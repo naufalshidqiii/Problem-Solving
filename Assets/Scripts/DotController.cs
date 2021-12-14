@@ -27,8 +27,8 @@ public class DotController : MonoBehaviour
     private void Push()
     {
         //Randomize force
-        float yRandomForce = Random.Range(-yForceRange, yForceRange);
-        float xRandomForce = Random.Range(-xForceRange, xForceRange);
+        float yRandomForce = Random.Range(-yForceRange - 50, yForceRange + 50);
+        float xRandomForce = Random.Range(-xForceRange - 50, xForceRange + 50);
 
         //Direction
         Vector2 direction = Vector2.zero;
