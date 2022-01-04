@@ -12,8 +12,8 @@ public class DotController : MonoBehaviour
     private float _yForceRange;
     [SerializeField]
     private float _moveSpeed = 10.0f;
-    [SerializeField]
-    private float _moveConstraint = 5f;
+    //[SerializeField]
+    //private float _moveConstraint = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,14 +32,12 @@ public class DotController : MonoBehaviour
         Move(h, v);
         */
 
-        //Problem 5 - Dot follow cursor
-        FollowCursor();
-
     }
 
     private void FixedUpdate()
     {
-        
+        //Problem 5 - Dot follow cursor
+        Invoke("FollowCursor", 2);
     }
 
     //Problem - 2 Push dot, 3 Bounce
