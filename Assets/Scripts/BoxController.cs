@@ -44,6 +44,7 @@ public class BoxController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             GameManager.Instance.IncreaseScore();
+            GameManager.Instance.RespawnBox();
             gameObject.SetActive(false);
         }
     }
