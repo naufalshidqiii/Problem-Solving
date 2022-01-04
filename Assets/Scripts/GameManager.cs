@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,8 +30,13 @@ public class GameManager : MonoBehaviour
     public float areaConstraintX = 5f;
     public float areaConstraintY = 5f;
 
+    private int currentScore = 0;
+
+
     private void Start()
     {
+        currentScore = 0;
+
         for (int i = 0; i < boxSpawn; i++)
         {
             BoxController box = Instantiate(boxPrefab);
@@ -46,5 +52,14 @@ public class GameManager : MonoBehaviour
         return new Vector2(xPosition, yPosition);
     }
 
+    public void IncreaseScore(int increment = 1)
+    {
+        currentScore += increment;
 
+    }
+
+    public float GetCurrentScore()
+    {
+        return currentScore;
+    }
 }
